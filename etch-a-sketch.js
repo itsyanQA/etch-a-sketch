@@ -1,3 +1,6 @@
+const DEFAULT_COLOR = "black";
+const DEFAULT_DIV_SIZE = 16;
+
 function addDivs(divsToAdd) {
     const mainContainer = document.querySelector(".sketch-container");
     for (let i = 0; i < divsToAdd; i++) {
@@ -31,9 +34,9 @@ function drawCells(color){
 }
 
 function getRandomRGB() {
-    let red = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
     return `rgb(${red}, ${green}, ${blue})`
 }
 
@@ -73,8 +76,8 @@ function deleteAllGridCells() {
 }
 
 function initializeSketch() {
-    addDivs(16);
-    drawCells('black');
+    addDivs(DEFAULT_DIV_SIZE);
+    drawCells(DEFAULT_COLOR);
 }
 
 function setCellColor() {
