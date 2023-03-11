@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="./etch-a-sketch.css">
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <script defer src="./etch-a-sketch.js"></script>
+</head>
+<body>
+    <div class="header">Etch-a-Sketch</div>
+    <div class="header-buttons">
+        <button class="clear button" onclick=clearGridBackGroundColors()>Clear</button>
+        <button class="button" onclick=toggleBlack()>Black</button>
+        <button class="button" onclick=toggleWhite()>White</button>
+        <button class="button" onclick=toggleRainbow()>Rainbow</button>
+        <button class="choose-size button" onclick=chooseGridSize()>Choose Grid Size</button>
+        <input type="color" value="#000000" class="input" oninput=setCellColor()>
+    </div>
+    <div class="sketch-wrapper">
+        <div class="sketch-container"></div>
+    </div>
+</body>
+</html>
